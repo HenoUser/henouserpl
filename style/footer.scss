@@ -47,26 +47,29 @@ footer {
 					 margin: 5px;
 					 height: 40px;
 					 width: 40px;
-					 background: center no-repeat;
-					 &.facebook-icon {
-						 background-image: url("../images/fb.png");
+					 background-color: $grey;
+					 border-radius: 20px;
+					 & > a {
+						 background: center no-repeat;
+						 display: block;
+						 height: 40px;
+						 width: 40px;
+					 }
+					 &.facebook-icon > a{
+						 background-image: url("../images/facebook.svg");
 						 background-size: auto 32px;
 					 }
-					 &.mail-icon {
-						 background-image: url("../images/mail.png");
+					 &.mail-icon > a{
+						 background-image: url("../images/mail.svg");
 						 background-size: auto 36px;
 					 }
-					 &.github-icon {
-						 background-image: url("../images/github.png");
-						 background-size: auto 40px;
+					 &.github-icon > a{
+						 background-image: url("../images/github.svg");
+						 background-size: auto 34px;
 					 }
-					 &.goldenline-icon {
+					 &.goldenline-icon > a {
 						 background-image: url("../images/goldenline.png");
 						 background-size: auto 40px;
-					 }
-					 & > a {
-						 height: 100%;
-						 width: 100%;
 					 }
 				}
 			}

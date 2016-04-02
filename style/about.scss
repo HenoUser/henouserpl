@@ -31,7 +31,7 @@
 				background-size: contain;
 				animation-iteration-count: infinite;
 				animation-name: about-images-switch;
-				animation-duration: 25s;
+				animation-duration: 10s;
 			}
 		}
 		& > .about-hex {
@@ -65,13 +65,19 @@
 	0% {
 		background-image: url("../images/grunt_logo.png");
 	}
-	19.9% {
+	0.1% {
 		background-image: url("../images/grunt_logo.png");
 	}
-	20% {
+	49.9% {
+		background-image: url("../images/grunt_logo.png");
+	}
+	50% {
 		background-image: url("../images/bower_logo.png");
 	}
-	39.9% {
+	50.1% {
+		background-image: url("../images/bower_logo.png");
+	}
+	100% {
 		background-image: url("../images/bower_logo.png");
 	}
 }

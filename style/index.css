@@ -114,7 +114,7 @@ header > .content > .header-content > .header-content-info > p > small {
   background-size: contain;
   animation-iteration-count: infinite;
   animation-name: about-images-switch;
-  animation-duration: 25s;
+  animation-duration: 10s;
 }
 .about > .content > .about-hex {
   z-index: 50;
@@ -144,13 +144,19 @@ header > .content > .header-content > .header-content-info > p > small {
   0% {
     background-image: url("../images/grunt_logo.png");
   }
-  19.9% {
+  0.1% {
     background-image: url("../images/grunt_logo.png");
   }
-  20% {
+  49.9% {
+    background-image: url("../images/grunt_logo.png");
+  }
+  50% {
     background-image: url("../images/bower_logo.png");
   }
-  39.9% {
+  50.1% {
+    background-image: url("../images/bower_logo.png");
+  }
+  100% {
     background-image: url("../images/bower_logo.png");
   }
 }
@@ -473,36 +479,39 @@ footer > .content > .footer-rights > .rights-contact > li {
   margin: 5px;
   height: 40px;
   width: 40px;
-  background: center no-repeat;
-}
-footer > .content > .footer-rights > .rights-contact > li.facebook-icon {
-  background-image: url("../images/fb.png");
-  background-size: auto 32px;
-}
-footer > .content > .footer-rights > .rights-contact > li.mail-icon {
-  background-image: url("../images/mail.png");
-  background-size: auto 36px;
-}
-footer > .content > .footer-rights > .rights-contact > li.github-icon {
-  background-image: url("../images/github.png");
-  background-size: auto 40px;
-}
-footer > .content > .footer-rights > .rights-contact > li.goldenline-icon {
-  background-image: url("../images/goldenline.png");
-  background-size: auto 40px;
+  background-color: #3c3c3c;
+  border-radius: 20px;
 }
 footer > .content > .footer-rights > .rights-contact > li > a {
-  height: 100%;
-  width: 100%;
+  background: center no-repeat;
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+footer > .content > .footer-rights > .rights-contact > li.facebook-icon > a {
+  background-image: url("../images/facebook.svg");
+  background-size: auto 32px;
+}
+footer > .content > .footer-rights > .rights-contact > li.mail-icon > a {
+  background-image: url("../images/mail.svg");
+  background-size: auto 36px;
+}
+footer > .content > .footer-rights > .rights-contact > li.github-icon > a {
+  background-image: url("../images/github.svg");
+  background-size: auto 34px;
+}
+footer > .content > .footer-rights > .rights-contact > li.goldenline-icon > a {
+  background-image: url("../images/goldenline.png");
+  background-size: auto 40px;
 }
 
 @font-face {
   font-family: "Dosis";
-  src: url(../Dosis-Book.ttf);
+  src: url(../fonts/Dosis-Book.ttf);
 }
 @font-face {
   font-family: "IndieFlower";
-  src: url(../IndieFlower.ttf);
+  src: url(../fonts/IndieFlower.ttf);
 }
 body {
   padding: 0;
