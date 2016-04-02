@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!-- TODO(jurek) SEO -->
+    <!-- TODO(jurek) Minification CSS/JS/HTML -->
+    <!-- TODO(jurek) Compression -->
+    <!-- TODO(jurek) SSH? -->
+    <meta charset="UTF-8">
+    <title>Paweł Jurkiewicz 'HenoUser' - Portfolio</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <!-- Fixed Navigation -->
+    <!-- TODO(jurek) Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <!-- Header -->
+    <!-- TODO(jurek) Parallax -->
+    <header>
+        <a name="home"></a>
+        <div class="content">
+            <div class="header-content">
+                <div class="header-content-photo"></div>
+                <div class="header-content-names">
+                    <h1>Paweł Jurkiewicz</h1>
+                    <div class="names-logo"></div>
+                </div>
+                <div class="header-content-info">
+                    <p>Web Developer / <small>Portfolio</small></p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About -->
+    <section class="about">
+        <a name="about"></a>
+        <div class="content">
+            <h1 class="about-header">O mnie</h1>
+            <p class="about-desc">
+                Od 5 lat fascynuję się technologiami sieciowymi i aplikacjami internetowymi.
+                Skupiam się przede wszystkim na interfejsie użytownika,
+                ale lubię eksperymentować z serwerem. W wolnych chwilach czytam literature fantasy i
+                gram na perkusji.
+            </p>
+            <div class="about-image">
+                <div class="about-image-switch"></div>
+            </div>
+            <div class="about-hex">
+                <svg width="300" height="300" style="stroke: #5c5c5c;stroke-width:1">
+                    <line class="l_1" x1="150" y1="150" x2="150" y2="0"></line>
+                    <line class="l_2" x1="150" y1="150" x2="279.9" y2="75"></line>
+                    <line class="l_3" x1="150" y1="150" x2="279.9" y2="225"></line>
+                    <line class="l_4" x1="150" y1="150" x2="150" y2="300"></line>
+                    <line class="l_5" x1="150" y1="150" x2="20.1" y2="225"></line>
+                    <line class="l_6" x1="150" y1="150" x2="20.1" y2="75"></line>
+                    <!--hex-->
+                    <filter id="shadow" x="-2" y="-2" width="202" height="202">
+                        <feComponentTransfer in=SourceAlpha>
+                            <feFuncA type="table" tableValues="1 0" />
+                        </feComponentTransfer>
+                        <feGaussianBlur stdDeviation="5"/>
+                        <feOffset dx="0" dy="0" result="offsetblur"/>
+                        <feFlood flood-color="#5c5c5c" result="color"/>
+                        <feComposite in2="offsetblur" operator="in"/>
+                        <feComposite in2="SourceAlpha" operator="in" />
+                        <feMerge>
+                            <feMergeNode in="SourceGraphic" />
+                            <feMergeNode />
+                        </feMerge>
+                    </filter>
+                    <polygon id="p_1" points="150 70, 220 110, 220 190, 150 230, 80 190, 80 110, 150 70" filter="url(#shadow)"  style="fill:#fafafa"></polygon>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio -->
+    <!-- Bogajphotography -->
+    <section class="portfolio bogajphotography">
+        <a name="portfolio"></a>
+        <div class="portfolio-background"></div>
+        <div class="content">
+            <h1>Bogajphotography</h1>
+            <p class="portfolio-description">Strona portfolio fotografa Adriana Bogaj</p>
+            <ul class="portfolio-links"></ul>
+            <ul class="portfolio-technologies">
+                <li>#purejs</li>
+                <li>#css3</li>
+                <li>#html5</li>
+                <li>#ajax</li>
+                <li>#portfolio</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Downloader HTML5 -->
+    <section class="portfolio downloader_html5">
+        <a name="portfolio"></a>
+        <div class="portfolio-background"></div>
+        <div class="content">
+            <h1>Downloader_HTML5</h1>
+            <p class="portfolio-description">Aplikacja udostępniająca zdjęcia dla zalogowanych użytowników</p>
+            <ul class="portfolio-links"></ul>
+            <ul class="portfolio-technologies">
+                <li>#angularjs</li>
+                <li>#nodejs</li>
+                <li>#expressjs</li>
+                <li>#mongodb</li>
+                <li>#css3</li>
+                <li>#html5</li>
+                <li>#ajax</li>
+                <li>#portfolio</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Contact / Footer -->
+    <footer>
+        <a name="contact"></a>
+        <div class="content">
+            <div class="footer-info">
+                <ul>
+                    <li>facebook.pl/jurek.pawel</li>
+                    <li>github.com/HenoUser</li>
+                    <li>goldenline.pl/pawel-jurkiewicz14/</li>
+                </ul>
+            </div>
+            <div class="footer-rights">
+                <div class="rights-logotype"></div>
+                <ul class="rights-introduce">
+                    <li>Paweł Jurkiewicz</li>
+                    <li>All rights Paweł Jurkiewicz 'HenoUser'</li>
+                </ul>
+                <ul class="rights-contact">
+                    <!--<li class="facebook-icon"><a href="http://www.facebook.pl/jurek.pawel"></a></li>-->
+                    <!--<li class="github-icon"><a href="https://github.com/HenoUser"></a></li>-->
+                    <!--<li class="goldenline-icon"><a href="http://www.goldenline.pl/pawel-jurkiewicz14/"></a></li>-->
+                    <!--<li class="mail-icon"><a href="#"></a></li>-->
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

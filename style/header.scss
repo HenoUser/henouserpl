@@ -1,0 +1,64 @@
+header {
+	height: 800px;
+	& > .content {
+		height: 700px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		& > .header-content {
+			margin: auto;
+			width: 750px;
+			& > * {
+				display: inline-block;
+				float: left;
+			}
+			& > .header-content-photo {
+				height: 145px;
+				width: 145px;
+				background: url("../images/photo_pawel.jpg") center;
+				background-size: contain;
+				border-radius: 80px;
+			}
+			& > .header-content-names {
+				height: 145px;
+				margin-left: 30px;
+				& > h1 {
+					font-size: 80px;
+					font-weight: lighter;
+					margin: 0;
+				}
+				& > .names-logo {
+					height: 30px;
+					width: 200px;
+					background: url("../images/logo_henouser.png") left center no-repeat;
+					background-size: contain;
+				}
+			}
+			& > .header-content-info {
+				position: relative;
+				display: block;
+				bottom: -200px;
+				font-size: 28px;
+				& > p {
+					color: $blue_light;
+					& > small {
+						color: $yellow;
+						font-family: "IndieFlower", sans-serif;
+					}
+				}
+				@media (min-width: 1150px) {
+					right: -620px;
+				}
+				@media (max-width: 1150px) and (min-width: 901px) {
+					right: -500px;
+				}
+				@media (max-width: 900px) and (min-width: 700px) {
+					right: -300px;
+				}
+				@media (max-width: 700px) {
+					margin: auto;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,156 @@
+.about {
+	@include downhill($white);
+	& > .content {
+		height: 700px;
+		color: $grey;
+		& > .about-header {
+			margin-top: 200px;
+			display: inline-block;
+		}
+		& > .about-desc {
+			width: 600px;
+			font-size: 18px;
+		}
+		& > .about-image, .about-hex {
+			height: 300px;
+			width: 300px;
+			position: absolute;
+			right: 0;
+			top: 250px;
+		}
+		& > .about-image {
+			animation-name: about-images;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			z-index: 99;
+			& > .about-image-switch {
+				height: 100%;
+				width: 100px;
+				margin: auto;
+				background: center no-repeat;
+				background-size: contain;
+				animation-iteration-count: infinite;
+				animation-name: about-images-switch;
+				animation-duration: 25s;
+			}
+		}
+		& > .about-hex {
+			z-index: 50;
+		}
+	}
+}
+
+@keyframes about-images {
+	0% {
+		-webkit-clip-path: polygon(150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px);
+	}
+	1% {
+		-webkit-clip-path: polygon(150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px);
+	}
+	25% {
+		-webkit-clip-path: polygon(150px 70px, 220px 110px, 220px 190px, 150px 230px, 80px 190px, 80px 110px, 150px 70px);
+	}
+	75% {
+		-webkit-clip-path: polygon(150px 70px, 220px 110px, 220px 190px, 150px 230px, 80px 190px, 80px 110px, 150px 70px);
+	}
+	100% {
+		-webkit-clip-path: polygon(150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px);
+	}
+	99% {
+		-webkit-clip-path: polygon(150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px);
+	}
+}
+
+@keyframes about-images-switch {
+	0% {
+		background-image: url("../images/grunt_logo.png");
+	}
+	19.9% {
+		background-image: url("../images/grunt_logo.png");
+	}
+	20% {
+		background-image: url("../images/bower_logo.png");
+	}
+	39.9% {
+		background-image: url("../images/bower_logo.png");
+	}
+}
+
+#p_1 {
+	animation-name: p1;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	margin: 150px 0 0 150px;
+	position: absolute;
+	top: 0;
+	z-index: 20;
+}
+
+@keyframes p1 {
+	0% {
+		transform: translate(150px, 150px) scale(0);
+	}
+	1% {
+		transform: translate(150px, 150px) scale(0);
+	}
+	25% {
+		transform: translate(0, 0) scale(1);
+	}
+	75% {
+		transform: translate(0, 0) scale(1);
+	}
+	99% {
+		transform: translate(150px, 150px) scale(0);
+	}
+	100% {
+		transform: translate(150px, 150px) scale(0);
+	}
+}
+
+// 1, 4 / 3, 4
+$val_1_4_height : 70px;
+$val_1_4_width : 40px;
+// 2, 5
+$val_2_5_width : 80px;
+
+.l_1 {
+	@include hex-path(l1)
+}
+@keyframes l1 {
+	@include hex-path-keyframes($val_1_4_height, $val_1_4_width)
+}
+
+.l_2 {
+	@include hex-path(l2)
+}
+@keyframes l2 {
+	@include hex-path-keyframes(0, $val_2_5_width)
+}
+
+.l_3 {
+	@include hex-path(l3)
+}
+@keyframes l3 {
+	@include hex-path-keyframes(-$val_1_4_height, $val_1_4_width)
+}
+
+.l_4 {
+	@include hex-path(l4)
+}
+@keyframes l4 {
+	@include hex-path-keyframes(-$val_1_4_height, -$val_1_4_width)
+}
+
+.l_5 {
+	@include hex-path(l5)
+}
+@keyframes l5 {
+	@include hex-path-keyframes(0, -$val_2_5_width)
+}
+
+.l_6 {
+	@include hex-path(l6)
+}
+@keyframes l6 {
+	@include hex-path-keyframes($val_1_4_height, -$val_1_4_width)
+}

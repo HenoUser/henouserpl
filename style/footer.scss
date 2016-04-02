@@ -1,0 +1,75 @@
+footer {
+	background-color: $white;
+	margin-top: -100px;
+	& > .content {
+		height: 400px;
+		& > .footer-info {
+			height: 100px;
+			border-bottom: 1px solid #c2ccd1;
+			padding-top: 200px;
+			box-sizing: content-box;
+			color: #3c3c3c;
+		}
+		& > .footer-rights {
+			height: 60px;
+			margin: 10px;
+			& > .rights-logotype {
+				float: left;
+				height: 60px;
+				width: 60px;
+				background: url("../images/logotype_dark.png") left center no-repeat;
+				background-size: contain;
+				display: inline-block;
+			}
+			& > .rights-introduce {
+				display: inline-block;
+				list-style: none;
+				padding: 0;
+				margin: 0 0 0 10px;
+				height: 60px;
+				& > li:nth-of-type(1) {
+					font-size: 30px;
+					color: $grey;
+				}
+				& > li:nth-of-type(2) {
+					font-size: 14px;
+					color: #7c7c7c;
+				}
+			}
+			& > .rights-contact {
+				float: right;
+				height: 60px;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				 & > li {
+					 display: inline-block;
+					 margin: 5px;
+					 height: 40px;
+					 width: 40px;
+					 background: center no-repeat;
+					 &.facebook-icon {
+						 background-image: url("../images/fb.png");
+						 background-size: auto 32px;
+					 }
+					 &.mail-icon {
+						 background-image: url("../images/mail.png");
+						 background-size: auto 36px;
+					 }
+					 &.github-icon {
+						 background-image: url("../images/github.png");
+						 background-size: auto 40px;
+					 }
+					 &.goldenline-icon {
+						 background-image: url("../images/goldenline.png");
+						 background-size: auto 40px;
+					 }
+					 & > a {
+						 height: 100%;
+						 width: 100%;
+					 }
+				}
+			}
+		}
+	}
+}

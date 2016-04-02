@@ -1,0 +1,79 @@
+@import "colors.scss";
+@import "mixin.scss";
+@import "header.scss";
+@import "about.scss";
+@import "portfolio.scss";
+@import "footer.scss";
+
+@font-face {
+    font-family: "Dosis";
+    src:url(../Dosis-Book.ttf);
+}
+
+@font-face {
+    font-family: "IndieFlower";
+    src:url(../IndieFlower.ttf);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: "Dosis", sans-serif;
+    color: $white;
+    background: url("../images/texture.png") fixed;
+    width: 100%;
+    & > * {
+        width: 100%;
+        & > .content {
+            // TODO(jurek) RWD here
+            margin: auto;
+            @media (min-width: 1150px) {
+                width: 1150px;
+            }
+            @media (max-width: 1150px) and (min-width: 901px) {
+                width: 900px;
+            }
+            @media (max-width: 900px) and (min-width: 700px) {
+                width: 900px;
+            }
+            @media (max-width: 700px) {
+                width: 94%;
+                margin: auto 3% auto 3%;
+            }
+        }
+    }
+}
+
+nav {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    margin: -150px 0 0 10px;
+    height: 300px;
+    width: 100px;
+    display: none;
+    //display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 99;
+    & > a {
+        color: $white;
+        width: 100%;
+        float: left;
+        display: block;
+        height: 16px;
+        font-size: 16px;
+        margin: 4px;
+        text-decoration: none;
+        transition: 0.3s;
+        &:hover {
+            font-size: 20px;
+            height: 20px;
+            text-decoration: underline;
+            transition: 0.3s;
+        }
+    }
+}

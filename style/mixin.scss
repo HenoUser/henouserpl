@@ -1,0 +1,55 @@
+@mixin downhill($color) {
+	width: 104%;
+	background-color: $color;
+	transform: rotate(6deg) skewX(6deg);
+	overflow: hidden;
+	margin: 0 -2% 0 -2%;
+	& > * {
+		transform: rotate(-6deg) skewX(-6deg);
+	}
+}
+
+@mixin portfolio {
+	height: 800px;
+	overflow: hidden;
+	& > .portfolio-background {
+		height: 1000px;
+		margin-top: -100px;
+		filter: blur(5px);
+		-webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		-o-filter: blur(5px);
+		opacity: 0.8;
+	}
+	& > .content {
+		margin-top: -900px;
+		height: 550px;
+	}
+}
+
+@mixin hex-path($name) {
+	animation-name: $name;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+@mixin hex-path-keyframes($x, $y) {
+	0% {
+		transform: translate(0);
+	}
+	1% {
+		 transform: translate(0);
+	 }
+	25% {
+		transform: translate($x, $y);
+	}
+	75% {
+		transform: translate($x, $y);
+	}
+	99% {
+		transform: translate(0);
+	}
+	100% {
+		transform: translate(0);
+	}
+}

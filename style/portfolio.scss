@@ -1,0 +1,51 @@
+.portfolio {
+	@include portfolio;
+	& > .content {
+		text-shadow: 1px 1px #3c3c3c;
+		display: block;
+		padding-top: 250px;
+		& > h1 {
+			display: block;
+			margin: 0 auto 10px auto;
+			font-size: 46px;
+			text-align: center;
+			font-weight: lighter;
+		}
+		& > .portfolio-description {
+			text-align: center;
+			font-size: 24px;
+			max-width: 500px;
+			margin: auto;
+		}
+		& > .portfolio-links {
+			height: 100px;
+		}
+		& > .portfolio-technologies {
+			list-style: none;
+			padding: 0;
+			width: 300px;
+			height: 150px;
+			float: right;
+			& > li {
+				margin: 3px;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.bogajphotography {
+	@include downhill(#3c3c3c);
+	& > .portfolio-background {
+		background: url('../images/bogajphotography.png') center no-repeat;
+		background-size: cover;
+	}
+}
+
+.downloader_html5 {
+	@include downhill(#3c3c3c);
+	& > .portfolio-background {
+		background: url('../images/downloader.png') center no-repeat;
+		background-size: cover;
+	}
+}
