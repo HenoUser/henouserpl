@@ -1,35 +1,85 @@
 header {
-	height: 800px;
+	@media (min-width: 751px) {
+		height: 800px;
+	}
+	@media (max-width: 750px) {
+		height: 450px;
+	}
 	& > .content {
-		height: 700px;
+		@media (min-width: 751px) {
+			height: 700px;
+		}
+		@media (max-width: 750px) {
+			height: 350px;
+		}
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		& > .header-content {
 			margin: auto;
-			width: 750px;
-			& > * {
-				display: inline-block;
-				float: left;
+			@media (min-width: 751px) {
+				width: 750px;
+				& > * {
+					display: inline-block;
+					float: left;
+				}
+				& > .header-content-names {
+					margin-left: 30px;
+					height: 145px;
+					& > h1 {
+						font-size: 80px;
+						margin: 0;
+					}
+					& > .names-logo {
+						height: 30px;
+						width: 200px;
+					}
+				}
+				& > .header-content-photo {
+					height: 145px;
+					width: 145px;
+					background: url("../images/photo_pawel.jpg") center;
+					background-size: contain;
+					border-radius: 80px;
+				}
+				& > .header-content-info {
+					bottom: -200px;
+				}
 			}
-			& > .header-content-photo {
-				height: 145px;
-				width: 145px;
-				background: url("../images/photo_pawel.jpg") center;
-				background-size: contain;
-				border-radius: 80px;
+			@media (max-width: 750px) {
+				& > * {
+					margin: auto;
+					display: block;
+					text-align: center;
+				}
+				& > .header-content-names {
+					margin-left: 0;
+					height: 90px;
+					& > h1 {
+						font-size: 50px;
+						margin: 0;
+					}
+					& > .names-logo {
+						height: 20px;
+						width: 100%;
+					}
+				}
+				& > .header-content-photo {
+					height: 90px;
+					width: 90px;
+					background: url("../images/photo_pawel.jpg") center;
+					background-size: contain;
+					border-radius: 45px;
+				}
+				& > .header-content-info {
+					bottom: -20px;
+				}
 			}
 			& > .header-content-names {
-				height: 145px;
-				margin-left: 30px;
 				& > h1 {
-					font-size: 80px;
 					font-weight: lighter;
-					margin: 0;
 				}
 				& > .names-logo {
-					height: 30px;
-					width: 200px;
 					background: url("../images/logo_henouser.png") left center no-repeat;
 					background-size: contain;
 				}
@@ -37,7 +87,6 @@ header {
 			& > .header-content-info {
 				position: relative;
 				display: block;
-				bottom: -200px;
 				font-size: 28px;
 				& > p {
 					color: $blue_light;
@@ -53,7 +102,7 @@ header {
 					right: -500px;
 				}
 				@media (max-width: 900px) and (min-width: 700px) {
-					right: -300px;
+					right: -200px;
 				}
 				@media (max-width: 700px) {
 					margin: auto;

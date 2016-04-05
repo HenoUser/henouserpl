@@ -15,6 +15,10 @@
     src:url(../fonts/IndieFlower.ttf);
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -23,12 +27,12 @@ body {
     overflow-y: scroll;
     font-family: "Dosis", sans-serif;
     color: $white;
-    background: url("../images/texture.png") fixed;
+    background: url("../images/texture.png");
+    position: absolute;
     width: 100%;
     & > * {
         width: 100%;
         & > .content {
-            // TODO(jurek) RWD here
             margin: auto;
             @media (min-width: 1150px) {
                 width: 1150px;
@@ -36,8 +40,8 @@ body {
             @media (max-width: 1150px) and (min-width: 901px) {
                 width: 900px;
             }
-            @media (max-width: 900px) and (min-width: 700px) {
-                width: 900px;
+            @media (max-width: 900px) and (min-width: 701px) {
+                width: 700px;
             }
             @media (max-width: 700px) {
                 width: 94%;

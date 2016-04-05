@@ -38,7 +38,6 @@
 	@include downhill(#3c3c3c);
 	& > .portfolio-background {
 		background: url('../images/bogajphotography.png') center no-repeat;
-		background-size: cover;
 	}
 }
 
@@ -46,6 +45,5 @@
 	@include downhill(#3c3c3c);
 	& > .portfolio-background {
 		background: url('../images/downloader.png') center no-repeat;
-		background-size: cover;
 	}
 }

@@ -1,14 +1,42 @@
 .about {
 	@include downhill($white);
 	& > .content {
-		height: 700px;
+		@media (min-width: 751px) {
+			height: 700px;
+			& > .about-header {
+				margin-top: 200px;
+			}
+		}
+		@media (max-width: 750px) {
+			height: 450px;
+			& > .about-header {
+				margin-top: 90px;
+			}
+			& > .about-desc {
+				text-align: justify;
+			}
+		}
 		color: $grey;
+		@media (min-width: 901px) {
+			& > .about-image, .about-hex {
+				display: block;
+			}
+			& > .about-desc {
+				width: 600px;
+			}
+		}
+		@media (max-width: 900px) {
+			& > .about-image, .about-hex {
+				display: none;
+			}
+			& > .about-desc {
+				width: 100%;
+			}
+		}
 		& > .about-header {
-			margin-top: 200px;
 			display: inline-block;
 		}
 		& > .about-desc {
-			width: 600px;
 			font-size: 18px;
 		}
 		& > .about-image, .about-hex {

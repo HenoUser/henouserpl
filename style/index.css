@@ -1,46 +1,101 @@
-header {
-  height: 800px;
+@media (min-width: 751px) {
+  header {
+    height: 800px;
+  }
+}
+@media (max-width: 750px) {
+  header {
+    height: 450px;
+  }
 }
 header > .content {
-  height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+@media (min-width: 751px) {
+  header > .content {
+    height: 700px;
+  }
+}
+@media (max-width: 750px) {
+  header > .content {
+    height: 350px;
+  }
+}
 header > .content > .header-content {
   margin: auto;
-  width: 750px;
 }
-header > .content > .header-content > * {
-  display: inline-block;
-  float: left;
+@media (min-width: 751px) {
+  header > .content > .header-content {
+    width: 750px;
+  }
+  header > .content > .header-content > * {
+    display: inline-block;
+    float: left;
+  }
+  header > .content > .header-content > .header-content-names {
+    margin-left: 30px;
+    height: 145px;
+  }
+  header > .content > .header-content > .header-content-names > h1 {
+    font-size: 80px;
+    margin: 0;
+  }
+  header > .content > .header-content > .header-content-names > .names-logo {
+    height: 30px;
+    width: 200px;
+  }
+  header > .content > .header-content > .header-content-photo {
+    height: 145px;
+    width: 145px;
+    background: url("../images/photo_pawel.jpg") center;
+    background-size: contain;
+    border-radius: 80px;
+  }
+  header > .content > .header-content > .header-content-info {
+    bottom: -200px;
+  }
 }
-header > .content > .header-content > .header-content-photo {
-  height: 145px;
-  width: 145px;
-  background: url("../images/photo_pawel.jpg") center;
-  background-size: contain;
-  border-radius: 80px;
-}
-header > .content > .header-content > .header-content-names {
-  height: 145px;
-  margin-left: 30px;
+@media (max-width: 750px) {
+  header > .content > .header-content > * {
+    margin: auto;
+    display: block;
+    text-align: center;
+  }
+  header > .content > .header-content > .header-content-names {
+    margin-left: 0;
+    height: 90px;
+  }
+  header > .content > .header-content > .header-content-names > h1 {
+    font-size: 50px;
+    margin: 0;
+  }
+  header > .content > .header-content > .header-content-names > .names-logo {
+    height: 20px;
+    width: 100%;
+  }
+  header > .content > .header-content > .header-content-photo {
+    height: 90px;
+    width: 90px;
+    background: url("../images/photo_pawel.jpg") center;
+    background-size: contain;
+    border-radius: 45px;
+  }
+  header > .content > .header-content > .header-content-info {
+    bottom: -20px;
+  }
 }
 header > .content > .header-content > .header-content-names > h1 {
-  font-size: 80px;
   font-weight: lighter;
-  margin: 0;
 }
 header > .content > .header-content > .header-content-names > .names-logo {
-  height: 30px;
-  width: 200px;
   background: url("../images/logo_henouser.png") left center no-repeat;
   background-size: contain;
 }
 header > .content > .header-content > .header-content-info {
   position: relative;
   display: block;
-  bottom: -200px;
   font-size: 28px;
 }
 header > .content > .header-content > .header-content-info > p {
@@ -62,7 +117,7 @@ header > .content > .header-content > .header-content-info > p > small {
 }
 @media (max-width: 900px) and (min-width: 700px) {
   header > .content > .header-content > .header-content-info {
-    right: -300px;
+    right: -200px;
   }
 }
 @media (max-width: 700px) {
@@ -72,25 +127,57 @@ header > .content > .header-content > .header-content-info > p > small {
 }
 
 .about {
-  width: 104%;
+  width: 102%;
   background-color: #fafafa;
   transform: rotate(6deg) skewX(6deg);
   overflow: hidden;
-  margin: 0 -2% 0 -2%;
+  margin: 0 0 0 -1%;
 }
 .about > * {
   transform: rotate(-6deg) skewX(-6deg);
 }
 .about > .content {
-  height: 700px;
   color: #3c3c3c;
 }
+@media (min-width: 751px) {
+  .about > .content {
+    height: 700px;
+  }
+  .about > .content > .about-header {
+    margin-top: 200px;
+  }
+}
+@media (max-width: 750px) {
+  .about > .content {
+    height: 450px;
+  }
+  .about > .content > .about-header {
+    margin-top: 90px;
+  }
+  .about > .content > .about-desc {
+    text-align: justify;
+  }
+}
+@media (min-width: 901px) {
+  .about > .content > .about-image, .about > .content .about-hex {
+    display: block;
+  }
+  .about > .content > .about-desc {
+    width: 600px;
+  }
+}
+@media (max-width: 900px) {
+  .about > .content > .about-image, .about > .content .about-hex {
+    display: none;
+  }
+  .about > .content > .about-desc {
+    width: 100%;
+  }
+}
 .about > .content > .about-header {
-  margin-top: 200px;
   display: inline-block;
 }
 .about > .content > .about-desc {
-  width: 600px;
   font-size: 18px;
 }
 .about > .content > .about-image, .about > .content .about-hex {
@@ -347,21 +434,53 @@ header > .content > .header-content > .header-content-info > p > small {
   }
 }
 .portfolio {
-  height: 800px;
   overflow: hidden;
 }
+@media (min-width: 1150px) {
+  .portfolio {
+    height: 800px;
+  }
+  .portfolio > .content {
+    margin-top: -900px;
+    height: 550px;
+  }
+}
+@media (max-width: 1150px) and (min-width: 901px) {
+  .portfolio {
+    height: 700px;
+  }
+  .portfolio > .content {
+    margin-top: -800px;
+    height: 550px;
+  }
+}
+@media (max-width: 900px) and (min-width: 701px) {
+  .portfolio {
+    height: 600px;
+  }
+  .portfolio > .content {
+    margin-top: -750px;
+    height: 550px;
+  }
+}
+@media (max-width: 700px) {
+  .portfolio {
+    height: 500px;
+  }
+  .portfolio > .content {
+    margin-top: -700px;
+    height: 550px;
+  }
+}
 .portfolio > .portfolio-background {
-  height: 1000px;
-  margin-top: -100px;
+  background-size: cover;
+  height: 122%;
+  margin-top: -6%;
   filter: blur(5px);
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
   opacity: 0.8;
-}
-.portfolio > .content {
-  margin-top: -900px;
-  height: 550px;
 }
 .portfolio > .content {
   text-shadow: 1px 1px #3c3c3c;
@@ -397,33 +516,31 @@ header > .content > .header-content > .header-content-info > p > small {
 }
 
 .bogajphotography {
-  width: 104%;
+  width: 102%;
   background-color: #3c3c3c;
   transform: rotate(6deg) skewX(6deg);
   overflow: hidden;
-  margin: 0 -2% 0 -2%;
+  margin: 0 0 0 -1%;
 }
 .bogajphotography > * {
   transform: rotate(-6deg) skewX(-6deg);
 }
 .bogajphotography > .portfolio-background {
   background: url("../images/bogajphotography.png") center no-repeat;
-  background-size: cover;
 }
 
 .downloader_html5 {
-  width: 104%;
+  width: 102%;
   background-color: #3c3c3c;
   transform: rotate(6deg) skewX(6deg);
   overflow: hidden;
-  margin: 0 -2% 0 -2%;
+  margin: 0 0 0 -1%;
 }
 .downloader_html5 > * {
   transform: rotate(-6deg) skewX(-6deg);
 }
 .downloader_html5 > .portfolio-background {
   background: url("../images/downloader.png") center no-repeat;
-  background-size: cover;
 }
 
 footer {
@@ -432,22 +549,38 @@ footer {
 }
 footer > .content {
   height: 400px;
+  margin-bottom: -5px;
 }
 footer > .content > .footer-info {
   height: 100px;
   border-bottom: 1px solid #c2ccd1;
-  padding-top: 200px;
+  padding-top: 240px;
   box-sizing: content-box;
   color: #3c3c3c;
 }
 footer > .content > .footer-rights {
-  height: 60px;
   margin: 10px;
+}
+@media (min-width: 601px) {
+  footer > .content > .footer-rights {
+    height: 60px;
+  }
+  footer > .content > .footer-rights > .rights-logotype {
+    height: 60px;
+    width: 60px;
+  }
+}
+@media (max-width: 600px) {
+  footer > .content > .footer-rights {
+    height: 40px;
+  }
+  footer > .content > .footer-rights > .rights-logotype {
+    height: 35px;
+    width: 35px;
+  }
 }
 footer > .content > .footer-rights > .rights-logotype {
   float: left;
-  height: 60px;
-  width: 60px;
   background: url("../images/logotype_dark.png") left center no-repeat;
   background-size: contain;
   display: inline-block;
@@ -457,19 +590,36 @@ footer > .content > .footer-rights > .rights-introduce {
   list-style: none;
   padding: 0;
   margin: 0 0 0 10px;
-  height: 60px;
 }
-footer > .content > .footer-rights > .rights-introduce > li:nth-of-type(1) {
-  font-size: 30px;
-  color: #3c3c3c;
+@media (min-width: 601px) {
+  footer > .content > .footer-rights > .rights-introduce {
+    height: 60px;
+  }
+  footer > .content > .footer-rights > .rights-introduce > li:nth-of-type(1) {
+    font-size: 30px;
+    color: #3c3c3c;
+  }
+  footer > .content > .footer-rights > .rights-introduce > li:nth-of-type(2) {
+    font-size: 14px;
+    color: #7c7c7c;
+  }
 }
-footer > .content > .footer-rights > .rights-introduce > li:nth-of-type(2) {
-  font-size: 14px;
-  color: #7c7c7c;
+@media (max-width: 600px) {
+  footer > .content > .footer-rights > .rights-introduce {
+    height: 40px;
+  }
+  footer > .content > .footer-rights > .rights-introduce > li:nth-of-type(1) {
+    font-size: 20px;
+    color: #3c3c3c;
+  }
+  footer > .content > .footer-rights > .rights-introduce > li:nth-of-type(2) {
+    font-size: 8px;
+    color: #7c7c7c;
+  }
 }
 footer > .content > .footer-rights > .rights-contact {
   float: right;
-  height: 60px;
+  height: 100%;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -479,26 +629,40 @@ footer > .content > .footer-rights > .rights-contact > li {
   margin: 5px;
   height: 40px;
   width: 40px;
-  background-color: #3c3c3c;
   border-radius: 20px;
+  background-color: #3c3c3c;
+}
+@media (min-width: 601px) {
+  footer > .content > .footer-rights > .rights-contact > li {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 600px) {
+  footer > .content > .footer-rights > .rights-contact > li {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+  }
 }
 footer > .content > .footer-rights > .rights-contact > li > a {
   background: center no-repeat;
   display: block;
-  height: 40px;
-  width: 40px;
+  height: 100%;
+  width: 100%;
 }
 footer > .content > .footer-rights > .rights-contact > li.facebook-icon > a {
   background-image: url("../images/facebook.svg");
-  background-size: auto 32px;
+  background-size: auto 80%;
 }
 footer > .content > .footer-rights > .rights-contact > li.mail-icon > a {
   background-image: url("../images/mail.svg");
-  background-size: auto 36px;
+  background-size: auto 90%;
 }
 footer > .content > .footer-rights > .rights-contact > li.github-icon > a {
   background-image: url("../images/github.svg");
-  background-size: auto 34px;
+  background-size: auto 85%;
 }
 footer > .content > .footer-rights > .rights-contact > li.goldenline-icon > a {
   background-image: url("../images/goldenline.png");
@@ -513,6 +677,10 @@ footer > .content > .footer-rights > .rights-contact > li.goldenline-icon > a {
   font-family: "IndieFlower";
   src: url(../fonts/IndieFlower.ttf);
 }
+html {
+  overflow-x: hidden;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -521,7 +689,8 @@ body {
   overflow-y: scroll;
   font-family: "Dosis", sans-serif;
   color: #fafafa;
-  background: url("../images/texture.png") fixed;
+  background: url("../images/texture.png");
+  position: absolute;
   width: 100%;
 }
 body > * {
@@ -540,9 +709,9 @@ body > * > .content {
     width: 900px;
   }
 }
-@media (max-width: 900px) and (min-width: 700px) {
+@media (max-width: 900px) and (min-width: 701px) {
   body > * > .content {
-    width: 900px;
+    width: 700px;
   }
 }
 @media (max-width: 700px) {

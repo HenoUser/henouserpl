@@ -3,20 +3,32 @@ footer {
 	margin-top: -100px;
 	& > .content {
 		height: 400px;
+		margin-bottom: -5px;
 		& > .footer-info {
 			height: 100px;
 			border-bottom: 1px solid #c2ccd1;
-			padding-top: 200px;
+			padding-top: 240px;
 			box-sizing: content-box;
 			color: #3c3c3c;
 		}
 		& > .footer-rights {
-			height: 60px;
 			margin: 10px;
+			@media (min-width: 601px) {
+				height: 60px;
+				& > .rights-logotype {
+					height: 60px;
+					width: 60px;
+				}
+			}
+			@media (max-width: 600px) {
+				height: 40px;
+				& > .rights-logotype {
+					height: 35px;
+					width: 35px;
+				}
+			}
 			& > .rights-logotype {
 				float: left;
-				height: 60px;
-				width: 60px;
 				background: url("../images/logotype_dark.png") left center no-repeat;
 				background-size: contain;
 				display: inline-block;
@@ -26,46 +38,69 @@ footer {
 				list-style: none;
 				padding: 0;
 				margin: 0 0 0 10px;
-				height: 60px;
-				& > li:nth-of-type(1) {
-					font-size: 30px;
-					color: $grey;
+				@media (min-width: 601px) {
+					height: 60px;
+					& > li:nth-of-type(1) {
+						font-size: 30px;
+						color: $grey;
+					}
+					& > li:nth-of-type(2) {
+						font-size: 14px;
+						color: #7c7c7c;
+					}
 				}
-				& > li:nth-of-type(2) {
-					font-size: 14px;
-					color: #7c7c7c;
+				@media (max-width: 600px) {
+					height: 40px;
+					& > li:nth-of-type(1) {
+						font-size: 20px;
+						color: $grey;
+					}
+					& > li:nth-of-type(2) {
+						font-size: 8px;
+						color: #7c7c7c;
+					}
 				}
 			}
 			& > .rights-contact {
 				float: right;
-				height: 60px;
+				height: 100%;
 				list-style: none;
 				padding: 0;
 				margin: 0;
 				 & > li {
+					 @media (min-width: 601px) {
+						 height: 40px;
+						 width: 40px;
+						 border-radius: 20px;
+					 }
+					 @media (max-width: 600px) {
+						 height: 30px;
+						 width: 30px;
+						 border-radius: 15px;
+					 }
 					 display: inline-block;
 					 margin: 5px;
 					 height: 40px;
 					 width: 40px;
-					 background-color: $grey;
 					 border-radius: 20px;
+					 background-color: $grey;
 					 & > a {
 						 background: center no-repeat;
 						 display: block;
-						 height: 40px;
-						 width: 40px;
+						 height: 100%;
+						 width: 100%;
 					 }
 					 &.facebook-icon > a{
 						 background-image: url("../images/facebook.svg");
-						 background-size: auto 32px;
+						 background-size: auto 80%;
 					 }
 					 &.mail-icon > a{
 						 background-image: url("../images/mail.svg");
-						 background-size: auto 36px;
+						 background-size: auto 90%;
 					 }
 					 &.github-icon > a{
 						 background-image: url("../images/github.svg");
-						 background-size: auto 34px;
+						 background-size: auto 85%;
 					 }
 					 &.goldenline-icon > a {
 						 background-image: url("../images/goldenline.png");
