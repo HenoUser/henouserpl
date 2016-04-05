@@ -549,12 +549,11 @@ footer {
 }
 footer > .content {
   height: 400px;
-  margin-bottom: -5px;
 }
 footer > .content > .footer-info {
   height: 100px;
   border-bottom: 1px solid #c2ccd1;
-  padding-top: 240px;
+  padding-top: 200px;
   box-sizing: content-box;
   color: #3c3c3c;
 }
@@ -685,8 +684,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
   font-family: "Dosis", sans-serif;
   color: #fafafa;
   background: url("../images/texture.png");
