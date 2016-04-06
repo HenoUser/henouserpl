@@ -69,6 +69,7 @@
 }
 
 @keyframes about-images {
+	// TODO(jurek) -webkit-clip-path - poprawić wspieranie w przeglądarkach
 	0% {
 		-webkit-clip-path: polygon(150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px);
 	}
