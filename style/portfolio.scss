@@ -37,13 +37,13 @@
 .bogajphotography {
 	@include downhill(#3c3c3c);
 	& > .portfolio-background {
-		background: url('../images/bogajphotography.png') center no-repeat;
+		background-image: url('../images/bogajphotography.png');
 	}
 }
 
 .downloader_html5 {
 	@include downhill(#3c3c3c);
 	& > .portfolio-background {
-		background: url('../images/downloader.png') center no-repeat;
+		background-image: url('../images/downloader.png');
 	}
 }

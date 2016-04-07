@@ -40,9 +40,28 @@
 	}
 	overflow: hidden;
 	& > .portfolio-background {
+		@media (min-width: 1501px) {
+			height: 1100px;
+			margin-top: -150px;
+		}
+		@media (max-width: 1500px) and (min-width: 1151px) {
+			height: 1000px;
+			margin-top: -100px;
+		}
+		@media (max-width: 1150px) and (min-width: 701px) {
+			height: 850px;
+			margin-top: -75px;
+		}
+		@media (max-width: 900px) and (min-width: 701px) {
+			height: 700px;
+			margin-top: -50px;
+		}
+		@media (max-width: 700px) {
+			height: 600px;
+			margin-top: -50px;
+		}
 		background-size: cover;
-		height: 122%;
-		margin-top: -6%;
+		background-position: center;
 		filter: blur(5px);
 		-webkit-filter: blur(5px);
 		-moz-filter: blur(5px);

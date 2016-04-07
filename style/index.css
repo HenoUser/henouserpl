@@ -209,21 +209,19 @@ header > .content > .header-content > .header-content-info > p > small {
 
 @keyframes about-images {
   0% {
-    -webkit-clip-path: polygon(150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px);
-  }
-  1% {
+    clip-path: polygon(150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px);
     -webkit-clip-path: polygon(150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px);
   }
   25% {
+    clip-path: polygon(150px 70px, 220px 110px, 220px 190px, 150px 230px, 80px 190px, 80px 110px, 150px 70px);
     -webkit-clip-path: polygon(150px 70px, 220px 110px, 220px 190px, 150px 230px, 80px 190px, 80px 110px, 150px 70px);
   }
   75% {
+    clip-path: polygon(150px 70px, 220px 110px, 220px 190px, 150px 230px, 80px 190px, 80px 110px, 150px 70px);
     -webkit-clip-path: polygon(150px 70px, 220px 110px, 220px 190px, 150px 230px, 80px 190px, 80px 110px, 150px 70px);
   }
   100% {
-    -webkit-clip-path: polygon(150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px);
-  }
-  99% {
+    clip-path: polygon(150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px);
     -webkit-clip-path: polygon(150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px, 150px 150px);
   }
 }
@@ -474,13 +472,42 @@ header > .content > .header-content > .header-content-info > p > small {
 }
 .portfolio > .portfolio-background {
   background-size: cover;
-  height: 122%;
-  margin-top: -6%;
+  background-position: center;
   filter: blur(5px);
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
   opacity: 0.8;
+}
+@media (min-width: 1501px) {
+  .portfolio > .portfolio-background {
+    height: 1100px;
+    margin-top: -150px;
+  }
+}
+@media (max-width: 1500px) and (min-width: 1151px) {
+  .portfolio > .portfolio-background {
+    height: 1000px;
+    margin-top: -100px;
+  }
+}
+@media (max-width: 1150px) and (min-width: 701px) {
+  .portfolio > .portfolio-background {
+    height: 850px;
+    margin-top: -75px;
+  }
+}
+@media (max-width: 900px) and (min-width: 701px) {
+  .portfolio > .portfolio-background {
+    height: 700px;
+    margin-top: -50px;
+  }
+}
+@media (max-width: 700px) {
+  .portfolio > .portfolio-background {
+    height: 600px;
+    margin-top: -50px;
+  }
 }
 .portfolio > .content {
   text-shadow: 1px 1px #3c3c3c;
@@ -526,7 +553,7 @@ header > .content > .header-content > .header-content-info > p > small {
   transform: rotate(-6deg) skewX(-6deg);
 }
 .bogajphotography > .portfolio-background {
-  background: url("../images/bogajphotography.png") center no-repeat;
+  background-image: url("../images/bogajphotography.png");
 }
 
 .downloader_html5 {
@@ -540,18 +567,18 @@ header > .content > .header-content > .header-content-info > p > small {
   transform: rotate(-6deg) skewX(-6deg);
 }
 .downloader_html5 > .portfolio-background {
-  background: url("../images/downloader.png") center no-repeat;
+  background-image: url("../images/downloader.png");
 }
 
 footer {
   background-color: #fafafa;
-  margin-top: -100px;
+  margin-top: -200px;
 }
 footer > .content {
-  height: 400px;
+  height: 500px;
 }
 footer > .content > .footer-info {
-  height: 100px;
+  height: 220px;
   border-bottom: 1px solid #c2ccd1;
   padding-top: 200px;
   box-sizing: content-box;
