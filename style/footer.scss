@@ -2,13 +2,33 @@ footer {
 	background-color: $white;
 	margin-top: -200px;
 	& > .content {
-		height: 500px;
+		height: 600px;
 		& > .footer-info {
-			height: 220px;
+			height: 250px;
 			border-bottom: 1px solid #c2ccd1;
-			padding-top: 200px;
+			padding-top: 250px;
 			box-sizing: content-box;
 			color: #3c3c3c;
+			font-size: 14px;
+			@media (min-width: 601px) {
+				font-size: 14px;
+			}
+			@media (max-width: 600px) {
+				font-size: 12px;
+			}
+			& > ul {
+				display: inline-block;
+				float: left;
+				list-style: none;
+				width: 48%;
+				margin: 1%;
+				padding: 60px 0 0 0;
+				& > h5 {
+					width: 200px;
+					padding-bottom: 10px;
+					border-bottom: 1px solid #cccccc;
+				}
+			}
 		}
 		& > .footer-rights {
 			margin: 10px;
@@ -90,20 +110,12 @@ footer {
 						 width: 100%;
 					 }
 					 &.facebook-icon > a{
-						 background-image: url("../images/facebook.svg");
-						 background-size: auto 80%;
-					 }
-					 &.mail-icon > a{
-						 background-image: url("../images/mail.svg");
-						 background-size: auto 90%;
+						 background-image: url("../images/facebook.png");
+						 background-size: auto 65%;
 					 }
 					 &.github-icon > a{
-						 background-image: url("../images/github.svg");
+						 background-image: url("../images/github.png");
 						 background-size: auto 85%;
-					 }
-					 &.goldenline-icon > a {
-						 background-image: url("../images/goldenline.png");
-						 background-size: auto 40px;
 					 }
 				}
 			}

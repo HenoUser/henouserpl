@@ -201,7 +201,7 @@ header > .content > .header-content > .header-content-info > p > small {
   background-size: contain;
   animation-iteration-count: infinite;
   animation-name: about-images-switch;
-  animation-duration: 10s;
+  animation-duration: 40s;
 }
 .about > .content > .about-hex {
   z-index: 50;
@@ -232,17 +232,50 @@ header > .content > .header-content > .header-content-info > p > small {
   0.1% {
     background-image: url("../images/grunt_logo.png");
   }
-  49.9% {
+  12.4% {
     background-image: url("../images/grunt_logo.png");
   }
+  12.5% {
+    background-image: url("../images/sass_logo.png");
+  }
+  24.9% {
+    background-image: url("../images/sass_logo.png");
+  }
+  25% {
+    background-image: url("../images/angular_logo.png");
+  }
+  37.4% {
+    background-image: url("../images/angular_logo.png");
+  }
+  37.5% {
+    background-image: url("../images/mongodb_logo.png");
+  }
+  49.9% {
+    background-image: url("../images/mongodb_logo.png");
+  }
   50% {
+    background-image: url("../images/nodejs_logo.png");
+  }
+  62.4% {
+    background-image: url("../images/nodejs_logo.png");
+  }
+  62.5% {
     background-image: url("../images/bower_logo.png");
   }
-  50.1% {
+  74.9% {
     background-image: url("../images/bower_logo.png");
+  }
+  75% {
+    background-image: url("../images/github_logo.png");
+  }
+  87.4% {
+    background-image: url("../images/github_logo.png");
+  }
+  87.5% {
+    background-image: url("../images/linux_logo.png");
   }
   100% {
-    background-image: url("../images/bower_logo.png");
+    background-image: url("../images/linux_logo.png");
   }
 }
 #p_1 {
@@ -575,14 +608,38 @@ footer {
   margin-top: -200px;
 }
 footer > .content {
-  height: 500px;
+  height: 600px;
 }
 footer > .content > .footer-info {
-  height: 220px;
+  height: 250px;
   border-bottom: 1px solid #c2ccd1;
-  padding-top: 200px;
+  padding-top: 250px;
   box-sizing: content-box;
   color: #3c3c3c;
+  font-size: 14px;
+}
+@media (min-width: 601px) {
+  footer > .content > .footer-info {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  footer > .content > .footer-info {
+    font-size: 12px;
+  }
+}
+footer > .content > .footer-info > ul {
+  display: inline-block;
+  float: left;
+  list-style: none;
+  width: 48%;
+  margin: 1%;
+  padding: 60px 0 0 0;
+}
+footer > .content > .footer-info > ul > h5 {
+  width: 200px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cccccc;
 }
 footer > .content > .footer-rights {
   margin: 10px;
@@ -679,20 +736,12 @@ footer > .content > .footer-rights > .rights-contact > li > a {
   width: 100%;
 }
 footer > .content > .footer-rights > .rights-contact > li.facebook-icon > a {
-  background-image: url("../images/facebook.svg");
-  background-size: auto 80%;
-}
-footer > .content > .footer-rights > .rights-contact > li.mail-icon > a {
-  background-image: url("../images/mail.svg");
-  background-size: auto 90%;
+  background-image: url("../images/facebook.png");
+  background-size: auto 65%;
 }
 footer > .content > .footer-rights > .rights-contact > li.github-icon > a {
-  background-image: url("../images/github.svg");
+  background-image: url("../images/github.png");
   background-size: auto 85%;
-}
-footer > .content > .footer-rights > .rights-contact > li.goldenline-icon > a {
-  background-image: url("../images/goldenline.png");
-  background-size: auto 40px;
 }
 
 @font-face {

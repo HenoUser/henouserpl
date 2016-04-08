@@ -59,7 +59,7 @@
 				background-size: contain;
 				animation-iteration-count: infinite;
 				animation-name: about-images-switch;
-				animation-duration: 10s;
+				animation-duration: 40s;
 			}
 		}
 		& > .about-hex {
@@ -94,17 +94,50 @@
 	0.1% {
 		background-image: url("../images/grunt_logo.png");
 	}
-	49.9% {
+	12.4% {
 		background-image: url("../images/grunt_logo.png");
 	}
+	12.5% {
+		background-image: url("../images/sass_logo.png");
+	}
+	24.9% {
+		background-image: url("../images/sass_logo.png");
+	}
+	25% {
+		background-image: url("../images/angular_logo.png");
+	}
+	37.4% {
+		background-image: url("../images/angular_logo.png");
+	}
+	37.5% {
+		background-image: url("../images/mongodb_logo.png");
+	}
+	49.9% {
+		background-image: url("../images/mongodb_logo.png");
+	}
 	50% {
+		background-image: url("../images/nodejs_logo.png");
+	}
+	62.4% {
+		background-image: url("../images/nodejs_logo.png");
+	}
+	62.5% {
 		background-image: url("../images/bower_logo.png");
 	}
-	50.1% {
+	74.9% {
 		background-image: url("../images/bower_logo.png");
+	}
+	75% {
+		background-image: url("../images/github_logo.png");
+	}
+	87.4% {
+		background-image: url("../images/github_logo.png");
+	}
+	87.5% {
+		background-image: url("../images/linux_logo.png");
 	}
 	100% {
-		background-image: url("../images/bower_logo.png");
+		background-image: url("../images/linux_logo.png");
 	}
 }
 
